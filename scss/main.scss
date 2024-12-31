@@ -1,2 +1,25 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+// Assure une hauteur minimale pour remplir l'écran
+html {
+    min-height: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+// Le main créee margin bottom crée un espace blanc entre le contenu et le footer
+main{
+    margin-bottom: 250px;
+}
+
+footer.footer {
+    background-color: #2C0201;
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    bottom: 0;
+}
