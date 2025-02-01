@@ -1,367 +1,329 @@
-@import 'custom';
+@import "custom";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
-
 
 // Assure une hauteur minimale pour remplir l'écran
 .html {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 // Marge pour éviter le chevauchement du contenu et du footer
 .main {
-    flex: 1; /* Prend tout l'espace disponible pour pousser le footer vers le bas */
-    margin-bottom: 0; /* Supprime la marge manuelle du bas */
-    padding: 20px
+  flex: 1; /* Prend tout l'espace disponible pour pousser le footer vers le bas */
+  margin-bottom: 0; /* Supprime la marge manuelle du bas */
+  padding: 20px;
 }
 
 // Style du footer
 .footer.footer {
-    background-color: #311716;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+  background-color: #311716;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
-.navbar{
-    background-color: #311716;
+.navbar {
+  background-color: #311716;
 }
 
 // Paragraphe
-.p{
-    font-family: $font-family-serif;
-    font-size: 18px;
+.p {
+  font-family: $font-family-serif;
+  font-size: 18px;
 }
 
-// Hero Section 1
-.hero-scene{
-    position: relative;
-    margin-bottom: 15px;
-    &::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../../Image/mountain-8117525_1280.jpg");
-        background-size: cover;
-        filter: brightness(0.8);   
-    }  
-
-    *{
-        //positionner les éléments devant le ::before
-        position: relative;
-    }
-    
-    .hero-scene-content{
-        height: 332px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    
+/* Lien d'inscription */
+a {
+  color: black !important;
+  text-decoration: none; /* Supprime le soulignement */
 }
 
-// Hero Section 2
-.hero-scene2{
-    position: relative;
-    margin-bottom: 15px;
-    &::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../../Image/trees-7710539_1280.jpg");
-        background-size: cover;
-        filter: brightness(0.8);   
-    }  
+a:hover {
+  text-decoration: underline; /* Ajoute un effet au survol */
+}
 
-    *{
-        //positionner les éléments devant le ::before
-        position: relative;
-    }
-    
-    .hero-scene-content2{
-        height: 332px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    
+/* Style du formulaire */
+.container {
+  max-width: 500px;
+}
+
+.form-control {
+  background: #dcd2b0;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #8c7c6d;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7b6a5b;
 }
 
 // Navigation
 .header nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    gap: 15px;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 15px;
 }
 
 .header nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* Mon Itinéraire */
 .main-content {
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 600px;
-    background-color: #311716;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #311716;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .title {
-    margin-bottom: 20px;
-    color: #624745;
+  margin-bottom: 20px;
+  color: #624745;
 }
 
 .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .form-group .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 // Boutons
 .btn {
-    background-color: #99914D;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #99914d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn2 {
-    background-color: #B89B9B;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #b89b9b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #624745;
+  background-color: #624745;
 }
 
 // Alignement du texte
 .text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 .text-align {
-    text-align: center;
+  text-align: center;
 }
 
-
 .body {
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .h1 {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 /* Section des covoiturages */
 .rides {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .ride {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ride-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 
 .ride-details {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .details-btn {
-    display: block;
-    margin: 15px auto 0;
-    padding: 10px 20px;
-    background-color: #B89B9B;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: #b89b9b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .alternative-btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .alternative-btn:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .h2 {
-    margin: 0;
+  margin: 0;
 }
 
 .section {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 // Détails conducteur
 .driver-details {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .driver-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .driver-info {
-    flex: 1;
+  flex: 1;
 }
 
 .vehicle-details,
 .preferences {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .preferences ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .preferences li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 // Section participation
 .participate-section {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .participate-btn {
-    padding: 10px 20px;
-    background: #669571;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  padding: 10px 20px;
+  background: #669571;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .participate-btn:hover {
-    background: #218838;
+  background: #218838;
 }
-
 
 /* Personnalisation de la barre de filtres */
 .dropdown-menu {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 /* Bouton de filtres */
 .btn-secondary {
-    background-color: #B89B9B;
-    border: none;
-    font-size: 1.2em;
-    border-radius: 15px;
-    padding: 10px 20px;
+  background-color: #b89b9b;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 15px;
+  padding: 10px 20px;
 }
 
 .btn-secondary:hover {
-    background-color: #9C7D7D;
+  background-color: #9c7d7d;
 }
 
 /* Champs de formulaire */
-.form-check-label, 
+.form-check-label,
 .form-label {
-    font-weight: bold;
-    color: #333;
+  font-weight: bold;
+  color: #333;
 }
 
 .form-control {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 1em;
 }
 
 .btn-primary {
-    background-color: #B89B9B;
-    border: none;
+  background-color: #b89b9b;
+  border: none;
 }
 
 .btn-primary:hover {
-    background-color: #9C7D7D;
+  background-color: #9c7d7d;
 }
