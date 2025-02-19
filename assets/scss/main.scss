@@ -1,23 +1,31 @@
-@import "custom";
+@import "custom"; // S'assurer que ce fichier existe
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
-// Assure une hauteur minimale pour remplir l'écran
-.html {
+/* ====== GLOBAL ====== */
+html {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-// Marge pour éviter le chevauchement du contenu et du footer
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== STRUCTURE PRINCIPALE ====== */
 .main {
-  flex: 1; /* Prend tout l'espace disponible pour pousser le footer vers le bas */
-  margin-bottom: 0; /* Supprime la marge manuelle du bas */
+  flex: 1;
   padding: 20px;
 }
 
-// Style du footer
-.footer.footer {
+.footer {
   background-color: #311716;
   color: white;
   text-align: center;
@@ -25,46 +33,27 @@
   width: 100%;
 }
 
-.navbar {
-  background-color: #311716;
-}
-
-// Paragraphe
-.p {
+/* ====== TYPOGRAPHIE ====== */
+p {
   font-family: $font-family-serif;
   font-size: 18px;
 }
 
-/* Lien d'inscription */
-a {
-  color: black !important;
-  text-decoration: none; /* Supprime le soulignement */
+h1,
+h2,
+h3,
+h4 {
+  margin: 20px 0;
+  text-align: center;
 }
 
-a:hover {
-  text-decoration: underline; /* Ajoute un effet au survol */
+/* ====== LIENS ====== */
+
+/* ====== NAVIGATION ====== */
+.navbar {
+  background-color: #311716;
 }
 
-/* Style du formulaire */
-.container {
-  max-width: 500px;
-}
-
-.form-control {
-  background: #dcd2b0;
-  border: none;
-}
-
-.btn-primary {
-  background-color: #8c7c6d;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #7b6a5b;
-}
-
-// Navigation
 .header nav ul {
   display: flex;
   list-style: none;
@@ -77,7 +66,73 @@ a:hover {
   text-decoration: none;
 }
 
-/* Mon Itinéraire */
+/* ====== FORMULAIRES ====== */
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+/* ====== BOUTONS ====== */
+.btn {
+  background-color: #8c7c6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #7b6a5b;
+}
+
+.btn-dark1 {
+  background-color: #3c221b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #8c7c6d;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7b6a5b;
+}
+
+.btn-secondary {
+  background-color: #b89b9b;
+  font-size: 1.2em;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #9c7d7d;
+}
+
+/* ====== SECTIONS PRINCIPALES ====== */
 .main-content {
   margin: 40px auto;
   padding: 20px;
@@ -87,77 +142,21 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  text-align: center;
-}
-
 .title {
   margin-bottom: 20px;
   color: #624745;
 }
 
-.form-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+.section {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-group .icon {
-  margin-right: 10px;
-}
-
-.input {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-// Boutons
-.btn {
-  background-color: #99914d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn2 {
-  background-color: #b89b9b;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #624745;
-}
-
-// Alignement du texte
-.text-justify {
-  text-align: justify;
-}
-
-.text-align {
-  text-align: center;
-}
-
-.body {
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.h1 {
-  text-align: center;
-  margin: 20px 0;
-}
-
-/* Section des covoiturages */
+/* ====== AFFICHAGE DES COVOITURAGES ====== */
 .rides {
   width: 80%;
   margin: 20px auto;
@@ -205,30 +204,13 @@ a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #555;
+  }
 }
 
-.alternative-btn:hover {
-  background-color: #555;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.h2 {
-  margin: 0;
-}
-
-.section {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-// Détails conducteur
+/* ====== DÉTAILS CONDUCTEUR ====== */
 .driver-details {
   display: flex;
   align-items: center;
@@ -240,10 +222,6 @@ a:hover {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.driver-info {
-  flex: 1;
 }
 
 .vehicle-details,
@@ -263,7 +241,7 @@ a:hover {
   gap: 10px;
 }
 
-// Section participation
+/* ====== SECTION PARTICIPATION ====== */
 .participate-section {
   text-align: center;
   margin-top: 20px;
@@ -277,53 +255,440 @@ a:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+
+  &:hover {
+    background: #218838;
+  }
 }
 
-.participate-btn:hover {
-  background: #218838;
-}
+/* ====== BOUTONS SPÉCIFIQUES ====== */
 
-/* Personnalisation de la barre de filtres */
-.dropdown-menu {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-}
-
-/* Bouton de filtres */
-.btn-secondary {
-  background-color: #b89b9b;
+.btn-warning {
+  background-color: #c29d5f;
   border: none;
-  font-size: 1.2em;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-large {
+  width: 120px;
+}
+
+/* ====== SECTIONS SPÉCIFIQUES POUR L'ESPACE CHAUFFEUR ====== */
+#selection-role {
+  margin: 40px auto;
+}
+
+#chauffeur-form,
+#liste-courses {
+  background-color: #3b1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+input,
+select {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/* ====== AJUSTEMENTS DIVERS ====== */
+.hidden {
+  display: none;
+}
+/*Contact*/
+body {
+  background-color: #f4f4f9;
+  font-family: "Arial", sans-serif;
+}
+.contact-title h1 {
+  font-size: 3rem;
+  color: #bc5409;
+  margin: 20px 0;
+}
+.contact-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.form-label {
+  font-weight: bold;
+  color: #655618;
+}
+.btn-primary {
+  background-color: #655618;
+  border: none;
   border-radius: 15px;
   padding: 10px 20px;
 }
-
-.btn-secondary:hover {
-  background-color: #9c7d7d;
+.btn-primary:hover {
+  background-color: #bc5409;
+}
+.invalid-feedback {
+  color: #ff0000;
+}
+p {
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 15px;
 }
 
-/* Champs de formulaire */
-.form-check-label,
-.form-label {
-  font-weight: bold;
-  color: #333;
-}
+/*espace Employé */
 
-.form-control {
-  border: 1px solid #ddd;
+.employe-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h1,
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+}
+
+.avis-section,
+.incidents-section {
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.avis {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
   padding: 8px;
-  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .valider {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .refuser {
+    background-color: #dd443f;
+    color: white;
+  }
+}
+/*espace administrateur*/
+
+.admin-header {
+  color: white;
+  padding: 20px;
+  font-size: 24px;
 }
 
 .btn-primary {
-  background-color: #b89b9b;
+  color: white;
+  padding: 10px 20px;
   border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
 }
 
-.btn-primary:hover {
-  background-color: #9c7d7d;
+.create-account {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid;
+}
+
+.btn-submit {
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.statistics {
+  margin: 20px auto;
+}
+
+.chart-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.account-management {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-admin {
+  background-color: #dd443f;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#create-account-section {
+  background-color: #311716;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.admin-sup-container {
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* covoiturages */
+
+/* ====== RÉSULTATS DE RECHERCHE ====== */
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .ride-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .ride-info {
+      margin-top: 10px;
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+/* ====== DÉTAILS CONDUCTEUR ====== */
+.driver-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.driver-photo {
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.vehicle-details,
+.preferences {
+  margin-top: 20px;
+}
+
+.preferences {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .ride {
+    flex-direction: column;
+    text-align: center;
+
+    .ride-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .driver-details {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .ride {
+    flex-direction: column;
+    text-align: center;
+
+    .ride-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.driver-details {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ====== RÉSULTATS DE RECHERCHE ====== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+  form {
+    display: flex;
+    gap: 10px;
+    input,
+    button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input {
+      flex: 1;
+    }
+    .button3 {
+      background-color: #956e6d;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #5f3736;
+      }
+    }
+  }
+}
+
+.rides {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .ride-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .ride-info {
+      margin-top: 10px;
+      p {
+        margin: 5px 0;
+      }
+    }
+
+    .details-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #b89b9b;
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #9c7d7d;
+      }
+    }
+  }
 }
